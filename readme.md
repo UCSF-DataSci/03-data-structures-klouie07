@@ -23,3 +23,4 @@
 	- You can iterate through the string using a for loop and string slicing
 	- Keep track of the maximum product as you go through the loooong number
 	- (Optional) Convert characters to integers using `int()`
+
