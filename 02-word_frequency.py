@@ -22,17 +22,30 @@ import sys
 def word_frequency(text):
     frequencies = {} # Dictionary to store word frequencies
 
-    # Your code here
+    punctuation = ('''!()-[]{};:'"\\<,>./?@#$%^&*_~''')
     
+    for char in punctuation:
+        text = text.replace(char, "") #remove all punctuation
+
+    text = text.lower() #ignore case
+
+    words = text.split()
+
+    for word in words:
+        if word in frequencies:
+            frequencies[word] += 1
+        else:
+            frequencies[word] = 1
+
+    frequencies = dict(sorted(frequencies.items()))
+
     return frequencies
 
 # Scaffold for opening a file and running word_frequency() on the contents
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: python word_frequency.py <input_file>")
-        sys.exit(1)
     
-    filename = sys.argv[1]
+    filename = 'alice_in_wonderland.txt'
+    
     try:
         with open(filename, 'r') as file:
             text = file.read() # Read the entire file into a string
