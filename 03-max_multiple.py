@@ -37,7 +37,7 @@ THOUSAND_DIGIT_NUMBER = """
 05886116467109405077541002256983155200055935729725
 71636269561882670428252483600823257530420752963450
 """.replace("\n", "")
-
+ 
 def find_greatest_product(number_string, adjacent_digits=13):
     max_product = 0
     

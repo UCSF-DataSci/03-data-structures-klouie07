@@ -29,7 +29,7 @@ quotes = [
     "Be yourself; everyone else is already taken. -Oscar Wilde"
 
 ]
-
+ 
 def get_quote_of_the_day(quotes):
     todays_quote = None
     today = date.today()
@@ -45,4 +45,4 @@ if __name__ == "__main__":
         file.write(f"{date.today()}: {quote_of_the_day}\n")
 
 # Cron job (add this to your crontab):
-# 0 8 * * * /usr/bin/python3 "C:/Users/jelou\-/Documents/DataSci_217_Git_Python/03-data-structures-klouie07/01-daily_quote.py" >> /path/to/daily_quote.txt
+# 0 8 * * * /usr/bin/python3 "C:/Users/jelou\-/Documents/DataSci_217_Git_Python/03-data-structures-klouie07/01-daily_quote.py" >> "C:/Users/jelou/Documents/DataSci_217_Git_Python/03-data-structures-klouie07/daily_quotes.txt"
